@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { buildTemplate } from './pug';
+import { buildTemplate, buildHomepage } from './pug';
 
 // initialize
 const app = express();
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // default index route
 app.get('/', (req, res) => {
   // res.send('hi');
-  res.send(buildTemplate('Danielle'));
+  res.send(buildHomepage());
 });
 
 // START THE SERVER
