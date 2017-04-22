@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { buildTemplate, buildHomepage } from './pug';
+import { buildLanding } from './landing';
 
 // initialize
 const app = express();
@@ -18,6 +19,10 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   // res.send('hi');
   res.send(buildHomepage());
+});
+
+app.get('/landing', (req, res) => {
+  res.send(buildLanding());
 });
 
 // START THE SERVER
