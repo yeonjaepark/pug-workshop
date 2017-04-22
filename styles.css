@@ -1,3 +1,8 @@
+body {
+  font-family: 'Amatic SC';
+  font-size: 1.5rem;
+}
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -11,6 +16,12 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.nav img {
+  height: 50px;
+  width: auto;
 }
 
 .nav ul {
@@ -20,6 +31,17 @@ li {
 
 .nav li {
   padding: 0px 10px;
+  border-radius: 5px;
+  border: 3px #767676 solid;
+}
+
+.nav li:hover {
+  background-color: #767676;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
 }
 
 .sitemap {
