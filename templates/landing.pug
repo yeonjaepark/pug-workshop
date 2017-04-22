@@ -2,20 +2,15 @@ doctype html
 html
   body
     main
-      .nav
-        img(src="img/icon")
-        ul
-          li Pug
-          li Documentation
-          li CS52
+      include navigation.pug
       .callout
         h1 Building HTML with Pug is easy!
         p Maybe some pug tips in here, idk
       .sitemap
-        each header in ['Category 1', 'Category 2', 'Category 3', 'Category 4']
+        each category in sitemap
           ul
-            h3!= header
-            each link in ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5']
+            h3!= category.header
+            each link in category.links
               li!= link
       .footer
         ul
