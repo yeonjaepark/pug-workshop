@@ -1,15 +1,18 @@
 doctype html
 html
+  head
+    link(rel='stylesheet', href='styles.css')
   body
     main
-      include navigation.pug
+      include templates/navigation.pug
       .callout
         h1 Building HTML with Pug is easy!
         p Maybe some pug tips in here, idk
       .sitemap
         each category in sitemap
           ul
-            h3!= category.header
+            li
+              h3!= category.header
             each link in category.links
               li!= link
       .footer
