@@ -1,5 +1,7 @@
 exports.doctype = 'html';
 
+exports.happy = true;
+
 exports.sitemap = [
   {
     header: 'Category A',
