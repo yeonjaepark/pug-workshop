@@ -18,9 +18,6 @@ To complete this workshop, follow the following steps:
 Be sure to look out for the following notations:
 * :computer: run in terminal
 * :rocket: this is a key step
-* :warning: watch out!
-* :question: explanation section- what is going on here?
-* :white_check_mark: checkpoint reached!
 
 ## Fork the Repo
 :rocket: First, make sure to fork [this](http://...) repo and clone it to your computer so we can get started!
