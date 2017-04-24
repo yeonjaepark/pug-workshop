@@ -44,6 +44,10 @@ li {
   color: black;
 }
 
+.callout {
+  background: url('images/callout.png');
+}
+
 .sitemap {
   display: flex;
   justify-content: space-around;
