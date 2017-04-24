@@ -5,18 +5,86 @@ exports.happy = true;
 exports.sitemap = [
   {
     header: 'Category A',
-    links: ['Link A.1', 'Link A.2', 'Link A.3', 'Link A.4', 'Link A.5'],
+    links: [
+      {
+        name: 'Link A.1',
+        url: '#',
+      }, {
+        name: 'Link A.2',
+        url: '#',
+      }, {
+        name: 'Link A.3',
+        url: '#',
+      }, {
+        name: 'Link A.4',
+        url: '#',
+      }, {
+        name: 'Link A.5',
+        url: '#',
+      }
+    ],
   },
   {
     header: 'Category B',
-    links: ['Link B.1', 'Link B.2', 'Link B.3', 'Link B.4', 'Link B.5'],
+    links: [
+      {
+        name: 'Link B.1',
+        url: '#',
+      }, {
+        name: 'Link B.2',
+        url: '#',
+      }, {
+        name: 'Link B.3',
+        url: '#',
+      }, {
+        name: 'Link B.4',
+        url: '#',
+      }, {
+        name: 'Link B.5',
+        url: '#',
+      }
+    ],
   },
   {
     header: 'Category C',
-    links: ['Link C.1', 'Link C.2', 'Link C.3', 'Link C.4', 'Link C.5'],
+    links: [
+      {
+        name: 'Link C.1',
+        url: '#',
+      }, {
+        name: 'Link C.2',
+        url: '#',
+      }, {
+        name: 'Link C.3',
+        url: '#',
+      }, {
+        name: 'Link C.4',
+        url: '#',
+      }, {
+        name: 'Link C.5',
+        url: '#',
+      }
+    ],
   },
   {
     header: 'Category D',
-    links: ['Link D.1', 'Link D.2', 'Link D.3', 'Link D.4', 'Link D.5'],
+    links: [
+      {
+        name: 'Link D.1',
+        url: '#',
+      }, {
+        name: 'Link D.2',
+        url: '#',
+      }, {
+        name: 'Link D.3',
+        url: '#',
+      }, {
+        name: 'Link D.4',
+        url: '#',
+      }, {
+        name: 'Link D.5',
+        url: '#',
+      }
+    ],
   },
 ];

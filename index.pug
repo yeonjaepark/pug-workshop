@@ -19,9 +19,14 @@ html
             li
               h3!= category.header
             each link in category.links
-              li!= link
-      .footer
-        ul
-          li 1
-          li 2
-          li 3
+              li
+                a(href=link.url)= link.name
+    .footer
+      span
+        a(href="https://github.com/yeonjaepark/pug-workshop/") Pug Workshop
+        | -
+        a(href='http://cs52.me') CS 52
+      ul
+        li 1
+        li 2
+        li 3
