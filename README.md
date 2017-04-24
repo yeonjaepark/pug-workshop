@@ -80,7 +80,7 @@ python -m SimpleHTTPServer 9000
 Visit http://localhost:9000/ and there you have it!
 Your site should look something like this:
 
-![](photos/hello-world.png)
+![Hello World](images/hello-world.png)
 
 
 ## Spice up your website
@@ -103,7 +103,7 @@ Let's make our website more interesting. Instead of having Hello World, let's ch
 ```
 Your page should look like this now:
 
-![](photos/footer.png)
+![Footer Screenshot](images/footer.png)
 
 ## Adding variables and conditionals
 
@@ -125,7 +125,7 @@ pug -P -O options.js templates/index.pug
 
 Your page should now look like this:
 
-![](photos/happy.png)
+![Happy Callout Screenshot](images/happy.png)
 
 :rocket: Now go into options.js and change happy to true, then reload your page and see what happens.
 
@@ -163,7 +163,7 @@ By iterating through the sitemap, we can create an unordered list for each categ
 
 Your page should look something like this:
 
-![](photos/sitemap.png)
+![Sitemap Screenshot](images/sitemap.png)
 
 :rocket: Go into your options.js and try changing around the variables. Then re-render your html and host your site to see your changes!
 
