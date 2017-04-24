@@ -13,7 +13,8 @@ To complete this workshop, follow the following steps:
 6. [Variables and Conditionals](#adding-variables-and-conditionals)
 7. [Let's add a navbar](#add-a-navbar)
 8. [Build the sitemap](#building-the-sitemap)
-9. [Style the site](#style-your-webpage)
+9. [Modify the Footer](#modify-the-footer)
+10. [Style the site](#style-your-webpage)
 
 Be sure to look out for the following notations:
 * :computer: run in terminal
@@ -130,18 +131,32 @@ Your page should now look like this:
 :rocket: Now go into options.js and change happy to true, then reload your page and see what happens.
 
 ## Add a navbar
-Another advantage of using pug is that you can use other templates that you have created and just put them into your pug file! You may have noticed that there is another pug file, navigation.pug. This file has the navigation template that we have created for you.
+Another advantage of using pug is that you can use other templates that you have created and just put them into your pug file! You may have noticed that there is another pug file in the templates folder, navigation.pug. This file has the navigation template that we have created for you.
 
 :rocket: Add this navigation template above your callout div.
 ```
-include navigation.pug
+include templates/navigation.pug
 ```
 Right now, your nav bar only has a list. How about adding a logo? Adding images to your webpage is really easy with pug.
 
 :rocket: Add this line above the unordered list in your navigation file.
 ```
-img(src="img/icon")
+img(src="images/icon")
 ```
+
+## Modify the footer
+
+Let's add some helpful links to the footer!
+
+:rocket: Before your unordered list in your footer, add in a span with some links using the a tag. To let the dash appear, we need to escape it, so add in a pipeline before the dash.
+
+```
+span
+  a(href="https://github.com/yeonjaepark/pug-workshop/") Pug Workshop
+  | -
+  a(href='http://cs52.me') CS 52
+```
+
 
 ## Building the sitemap
 Like what we did in our first lab, we will be creating some headers and links. Unlike writing everything out in HTML over and over again like we did in Lab 1, with Pug, we can just iterate through a list.
@@ -150,15 +165,17 @@ In your options.js file, we have given you some data that you will be using in t
 
 By iterating through the sitemap, we can create an unordered list for each category so that the list starts with a header and then has the links that go with each header. It should look similar to what you had for Lab 1.
 
-:rocket: Create a new div with the class sitemap after your callout div and go through each item in the list sitemap, extracting the header and then looping through the links.  
+:rocket: Create a new div with the class sitemap after your callout div and go through each item in the list sitemap, extracting the header and then looping through the links.
 
 ```
 .sitemap
   each category in sitemap
     ul
-      h3= category.header
+      li
+        h3!= category.header
       each link in category.links
-        li= link
+        li
+          a(href=link.url)= link.name
 ```
 
 Your page should look something like this:
