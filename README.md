@@ -33,7 +33,7 @@ npm install pug-cli -g
 This installs the package globally so the node-modules file is no longer needed.
 
 ## Start a Pug File
-We will be working in a .pug file, so let's create the file in templates.
+We will be working in a .pug file, so let's create a index.pug file!
 
 :computer: Create an index pug file.
 ```
@@ -93,7 +93,7 @@ Let's make our website more interesting. Instead of having Hello World, let's ch
     h1 Building HTML with Pug is easy!
 ```
 
-:rocket: Next, try adding a footer as an unordered list with three items. To do so, use the footer tag, the ul tag, and the li tag.
+:rocket: Next, try adding a footer as an unordered list with three items under the main class. To do so, use the footer tag, the ul tag, and the li tag.
 ```
 .footer
   ul
@@ -120,7 +120,7 @@ Since we are now using the javascript file that stores all the variables and dat
 
 :computer: Run the following command.
 ```
-pug -P -O options.js templates/index.pug
+pug -P -O options.js index.pug
 ```
 
 Your page should now look like this:
@@ -130,7 +130,7 @@ Your page should now look like this:
 :rocket: Now go into options.js and change happy to true, then reload your page and see what happens.
 
 ## Add a navbar
-Another advantage of using pug is that you can use other templates that you have created and just put them into your pug file! You may have noticed that in your templates folder, there is another pug file, navigation.pug. This file has the navigation template that we have created for you.
+Another advantage of using pug is that you can use other templates that you have created and just put them into your pug file! You may have noticed that there is another pug file, navigation.pug. This file has the navigation template that we have created for you.
 
 :rocket: Add this navigation template above your callout div.
 ```
@@ -180,7 +180,7 @@ link(href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700', rel='styl
 
 And there you have it!
 
-### Checklist
+## Checklist
 :white_check_mark: Installed pug and served a Hello World! page with pug.
 
 :white_check_mark: Used variables and conditionals in pug file.
@@ -190,17 +190,3 @@ And there you have it!
 :white_check_mark: Built the sitemap using loops in pug file.
 
 :white_check_mark: Optional: style the page some more!
-
-
-### Order of readme
-
-1. Build simple Hello world! in the body
-2. Change Hello World! to main div and a callout (assumes things are divs if you don’t specify) (create a div called callout) (h1, p)
-3. Run pug -P -w templates/index.pug
-4. create footer with list (ul)
-5.  add nav bar (include nav.pug) see how you can pull in other templates. add in an image to the nav bar before the ul
-6. spice up callout (add if else statement)
-7. build sitemap with
-8. run pug -P -w options.js tempaltes/index.pug
-9. change variables in js (from false to true for happy and other list variables)
-10. link stylesheet and voila!
