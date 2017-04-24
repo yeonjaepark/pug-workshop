@@ -25,7 +25,8 @@ Be sure to look out for the following notations:
 
 ## Install Pug
 Then, in your new repository, install Pug. We will be working with [Pug's CLI interface](https://www.npmjs.com/package/pug-cli) so that we can run the files without a server.
-:computer:
+
+:computer: Install pug from your command line.
 ```
 npm install pug-cli -g
 ```
@@ -33,16 +34,20 @@ This installs the package globally so the node-modules file is no longer needed.
 
 ## Start a Pug File
 We will be working in a .pug file, so let's create the file in templates.
-:computer:
+
+:computer: Create an index pug file.
 ```
 touch index.pug
+```
+Or if you're using Windows...
+```
 atom index.pug
 ```
 One of the main advantages of using Pug is that the syntax is very clean and simple. Rather than dealing with the XML styling of HTML with all the tags, we can simply write p or h1 to specify how to format the content.
 
 Let's start with a very simple Hello World!
 
-:rocket: Start with the beginning header to the pug file. It is like an html file, but simpler (no closing tags are needed).
+:rocket: Start by adding a beginning header to the pug file. It looks just like an html file, but simpler (no closing tags are needed, for example).
 ```
 doctype html
 html
@@ -50,23 +55,25 @@ html
   body
 ```
 
-Now, you can add in Hello World to your body!
+Now, let's add in "Hello World!" to your body!
 
-:rocket:
+:warning: Remember: indents are crucial for nesting in pug.
+
+:rocket: Add the text under body.
 ```
 h1 Hello world!
 ```
 
 ## Serving your project on a browser
-With the new pug file, we can now render it into an HTML file and host it locally to see our work so far. It is very simple to render our pug file into an HTML file.
-:computer:
+With our new pug file, we can now compile it into an HTML file and host it locally to see our work so far. It is very simple to render our pug file into an HTML file.
+
+:computer: Run the following command.
 ```
 pug -P -w index.pug
 ```
-The -P tag will format the HTML file to include whitespaces while the -w tag allows for automatic re-rendering every time you update your index.pug file. Take a look at your new html file, which should be called index.html.
+The -P tag will format the HTML file to include whitespaces while the -w tag allows for automatic re-rendering every time you update your index.pug file. Take a look at your new html file, which should be called index.html. :thumbsup:
 
-:computer:
-Then, to host it locally, paste the line that we have been using.
+:computer: Now, let's host it locally by running the following familiar command.
 ```
 python -m SimpleHTTPServer 9000
 ```
@@ -79,7 +86,7 @@ Your site should look something like this:
 ## Spice up your website
 Let's make our website more interesting. Instead of having Hello World, let's change this to be a callout. In Pug, if there are no specified tags, it is assumed that you are creating a div. First, create a div with the class as main and under that div, let's create a div with class callout. To write classes and IDs, we write it the same way as in a css file, .class and #ID.
 
-:rocket: Add this to your body.
+:rocket: Add the following to your body.
 ```
 .main
   .callout
@@ -94,13 +101,13 @@ Let's make our website more interesting. Instead of having Hello World, let's ch
     li 2
     li 3
 ```
-Your page should look like this:
+Your page should look like this now:
 
 ![](photos/footer.png)
 
 ## Adding variables and conditionals
 
-One of the cool things about using Pug is that we can add in conditionals. Inside your pug file, you can add in if else statements in addition to using variables. If you look at the options.js file that we have given you, we have a variable happy that has a boolean as a value. Now, we can use this so that if happy, we display one image, or else, a different image.
+One of the cool things about using Pug is that we can add in conditionals. Inside your pug file, you can add in if-else statements in addition to using variables. If you look at the options.js file that we have given you, we have a variable happy that has a boolean as a value. Now, we can use this so that if happy, we display one image, otherwise, display a different image.
 
 :rocket: Try adding this to your callout under h1.
 ```
@@ -111,7 +118,7 @@ else
 ```
 Since we are now using the javascript file that stores all the variables and data, we want to add a tag when we render our HTML file so that it knows to look at the javascript file to look for data. Similar to what we have been doing, we just need to add an options switch.
 
-:computer:
+:computer: Run the following command.
 ```
 pug -P -O options.js templates/index.pug
 ```
@@ -120,10 +127,10 @@ Your page should now look like this:
 
 ![](photos/happy.png)
 
-:rocket: Now go into options.js and change happy to true and reload your page.
+:rocket: Now go into options.js and change happy to true, then reload your page and see what happens.
 
 ## Add a navbar
-Another advantage of using pug is that you can use other templates that you have created and just put it into your pug file! You may have noticed that in your templates folder, there is another pug file, navigation.pug. This file has the navigation template that we have created for you.
+Another advantage of using pug is that you can use other templates that you have created and just put them into your pug file! You may have noticed that in your templates folder, there is another pug file, navigation.pug. This file has the navigation template that we have created for you.
 
 :rocket: Add this navigation template above your callout div.
 ```
@@ -131,7 +138,7 @@ include navigation.pug
 ```
 Right now, your nav bar only has a list. How about adding a logo? Adding images to your webpage is really easy with pug.
 
-:rocket: Add this above the unordered list in your navigation file.
+:rocket: Add this line above the unordered list in your navigation file.
 ```
 img(src="img/icon")
 ```
@@ -173,7 +180,16 @@ link(href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700', rel='styl
 
 And there you have it!
 
+### Checklist
+:white_check_mark: Installed pug and served a Hello World! page with pug.
 
+:white_check_mark: Used variables and conditionals in pug file.
+
+:white_check_mark: Linked navbar template to pug file and added logo.
+
+:white_check_mark: Built the sitemap using loops in pug file.
+
+:white_check_mark: Optional: style the page some more!
 
 
 ### Order of readme
