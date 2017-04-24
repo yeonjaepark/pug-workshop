@@ -1,0 +1,104 @@
+body {
+  font-family: 'Amatic SC';
+  font-size: 1.5rem;
+  margin: 0px
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.nav img {
+  height: 50px;
+  width: auto;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  padding: 0px 10px;
+  border-radius: 5px;
+  border: 1px black solid;
+  margin: 5px;
+}
+
+.nav li:hover {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  padding: 5px;
+}
+
+.callout {
+  background-image: url('images/callout.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+.callout img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.sitemap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sitemap a {
+  color: black;
+}
+
+.sitemap h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.sitemap ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  padding: 0px 10px;
+  background-color: #DADADA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer ul {
+  display: inline-flex;
+  justify-content: flex-end;
+}

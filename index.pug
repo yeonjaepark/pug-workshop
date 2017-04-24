@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='styles.css')
+    link(href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700', rel='stylesheet')
+  body
+    .main
+      include templates/navigation.pug
+      .callout
+        h1 Building HTML with Pug is easy!
+        p A gif for your mood:
+        if happy
+          img(src="https://i.imgur.com/AV83fzb.gif")
+        else
+          img(src="https://i.imgur.com/rG0fW29.gif")
+      .sitemap
+        each category in sitemap
+          ul
+            li
+              h3!= category.header
+            each link in category.links
+              li
+                a(href=link.url)= link.name
+    .footer
+      span
+        a(href="https://github.com/yeonjaepark/pug-workshop/") Pug Workshop
+        | -
+        a(href='http://cs52.me') CS 52
+      ul
+        li 1
+        li 2
+        li 3
