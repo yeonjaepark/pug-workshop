@@ -9,7 +9,11 @@ html
       .callout
         img(src='images/callout.png')
         h1 Building HTML with Pug is easy!
-        p Maybe some pug tips in here, idk
+        p A gif for your mood:
+        if happy
+          img(src="https://i.imgur.com/AV83fzb.gif")
+        else
+          img(src="https://i.imgur.com/rG0fW29.gif")
       .sitemap
         each category in sitemap
           ul
