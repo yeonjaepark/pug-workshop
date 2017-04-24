@@ -20,7 +20,7 @@ Be sure to look out for the following notations:
 * :rocket: this is a key step
 
 ## Fork the Repo
-:rocket: First, make sure to fork [this](http://...) repo and clone it to your computer so we can get started!
+:rocket: First, make sure to fork [this](https://github.com/yeonjaepark/pug-workshop) repo and clone it to your computer so we can get started!
 
 
 ## Install Pug
