@@ -141,7 +141,7 @@ Right now, your nav bar only has a list. How about adding a logo? Adding images 
 
 :rocket: Add this line above the unordered list in your navigation file.
 ```
-img(src="images/icon")
+img(src="images/icon.svg", alt='icon')
 ```
 
 ## Modify the footer
